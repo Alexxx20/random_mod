@@ -1,0 +1,139 @@
+political_decisions = {
+	wool_and_wine = {
+		potential = {
+			NOT = {
+				has_country_flag = godsake
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+            wool = 1000
+            wine = 1000
+            set_country_flag = godsake
+            }
+	}
+	research_buff = {
+		potential = {
+			NOT = {
+				has_country_flag = research_buff
+			}
+		}
+		
+		allow = {
+			civilized = yes
+		}
+		
+		effect = {
+			
+            add_country_modifier = {
+				name = research_buff
+				duration = 365
+			}
+
+            set_country_flag = research_buff
+        }
+	}
+	Disband_Tartars = {
+		ai_will_do = {
+			factor = 1
+		}
+		potential = {
+			year = 1820
+			tag = GOL
+			OR = {
+				is_our_vassal = ASK
+				is_our_vassal = NOG
+				is_our_vassal = CRI
+				is_our_vassal = BSH
+				is_our_vassal = SIB
+				is_our_vassal = KAZ
+			}
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				is_our_vassal = ASK
+				is_our_vassal = NOG
+				is_our_vassal = CRI
+				is_our_vassal = BSH
+				is_our_vassal = SIB
+				is_our_vassal = KAZ
+			}
+		}
+		effect = {
+
+			release_vassal = ASK
+			release_vassal = NOG
+			release_vassal = CRI
+			release_vassal = BSH
+			release_vassal = SIB
+			release_vassal = KAZ
+
+			GOL = { war = {	war_name = "TARTAR_civil_war"	target = ASK attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GOL = { war = {	war_name = "TARTAR_civil_war"	target = NOG attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GOL = { war = {	war_name = "TARTAR_civil_war"	target = CRI attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GOL = { war = {	war_name = "TARTAR_civil_war"	target = BSH attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GOL = { war = {	war_name = "TARTAR_civil_war"	target = SIB attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GOL = { war = {	war_name = "TARTAR_civil_war"	target = KAZ attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+
+			ASK = { war = {	war_name = "TARTAR_civil_war"	target = NOG attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ASK = { war = {	war_name = "TARTAR_civil_war"	target = CRI attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ASK = { war = {	war_name = "TARTAR_civil_war"	target = BSH attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ASK = { war = {	war_name = "TARTAR_civil_war"	target = SIB attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ASK = { war = {	war_name = "TARTAR_civil_war"	target = KAZ attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+
+			NOG = { war = {	war_name = "TARTAR_civil_war"	target = CRI attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			NOG = { war = {	war_name = "TARTAR_civil_war"	target = BSH attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			NOG = { war = {	war_name = "TARTAR_civil_war"	target = SIB attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			NOG = { war = {	war_name = "TARTAR_civil_war"	target = KAZ attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+
+			CRI = { war = {	war_name = "TARTAR_civil_war"	target = BSH attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			CRI = { war = {	war_name = "TARTAR_civil_war"	target = SIB attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			CRI = { war = {	war_name = "TARTAR_civil_war"	target = KAZ attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+
+			BSH = { war = {	war_name = "TARTAR_civil_war"	target = SIB attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			BSH = { war = {	war_name = "TARTAR_civil_war"	target = KAZ attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+
+			SIB = { war = {	war_name = "TARTAR_civil_war"	target = KAZ attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+
+		}
+	}
+	Reunite_Tartars = {
+		ai_will_do = {
+			factor = 1
+		}
+		potential = {
+			war = no
+			tag = GOL
+			tag = ASK
+			tag = NOG
+			tag = CRI
+			tag = BSH
+			tag = SIB
+			tag = KAZ
+		}
+
+		allow = {
+			owns = 967
+			owns = 1030
+			owns = 1036
+			owns = 1039
+			owns = 1042
+			owns = 1061
+			owns = 1182
+		}
+
+		effect = {
+			GOL = { all_core = { add_core = THIS } }
+			ASK = { all_core = { add_core = THIS } }
+			NOG = { all_core = { add_core = THIS } }
+			CRI = { all_core = { add_core = THIS } }
+			BSH = { all_core = { add_core = THIS } }
+			SIB = { all_core = { add_core = THIS } }
+			KAZ = { all_core = { add_core = THIS } }
+		}
+}

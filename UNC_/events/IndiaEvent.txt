@@ -1,0 +1,122 @@
+
+# India Substate Ultimatum Event
+country_event = {
+	id = 199011984
+	title = "EVTNAME199011984"
+	desc = "EVTDESC199011984"
+	picture = "IndiaDiplomat"
+
+	is_triggered_only = yes
+
+	option = {	
+		
+		name = "EVTOPTB199011984"
+		FROM = {
+			badboy = -11
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = cut_down_to_size }
+				call_ally = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.9
+		}
+	}
+	
+	option = {	
+		name = "EVTOPTC199011984"
+		FROM = {
+			create_vassal = THIS
+			country_event = 199011985
+		}
+		prestige = -5
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = 199011985
+	title = "EVTNAME199011985"
+	desc = "EVTDESC199011985"
+	picture = "IndiaDiplomat"
+
+	is_triggered_only = yes
+
+	option = {	
+		prestige = 2
+		name = "EVTOPTB199011985"
+		
+	}
+}
+
+country_event = {
+	id = 199011986
+	title = "EVTNAME199011986"
+	desc = "EVTDESC199011986"
+	picture = "SurRebel"
+
+	trigger = {
+		AND = {
+			tag = MUG
+			government = absolute_monarchy
+			has_core_in = JPR
+			war = no
+			NOT = {
+				has_global_flag = Rebel_Sur
+			}
+		}
+	}
+
+	option = {	
+		name = "EVTOPTB199011986"
+		set_global_flag = Rebel_Sur
+		kill_leader = 19
+		release = JPR
+		JPR = {
+			change_tag = SUR
+			any_owned = { add_core = OUD remove_core = JPR remove_core = SUR}
+			war = {
+				target = BEN
+				attacker_goal = { casus_belli = conquest }
+				call_ally = no
+			}
+			militancy = 10
+		}
+		militancy = 10
+		war = {
+			target = SUR
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
+		}
+	}
+	
+	option = {	
+		name = "EVTOPTC199011986"
+		set_global_flag = Rebel_Sur
+		kill_leader = 19
+		release = JPR
+		JPR = {
+			change_tag = SUR
+			any_owned = { add_core = OUD remove_core = JPR remove_core = SUR}
+			war = {
+				target = BEN
+				attacker_goal = { casus_belli = conquest }
+				call_ally = no
+			}
+			militancy = 10
+		}
+		militancy = 10
+		war = {
+			target = SUR
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
+		}
+		change_tag_no_core_switch = SUR
+	}
+}

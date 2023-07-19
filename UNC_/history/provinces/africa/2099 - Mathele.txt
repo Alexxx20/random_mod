@@ -1,0 +1,6 @@
+owner = XSH
+controller = XSH
+add_core = XSH
+trade_goods = grain
+life_rating = 35
+colonial = 2

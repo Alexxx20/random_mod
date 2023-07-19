@@ -1,0 +1,383 @@
+
+political_decisions = {
+	win_chinese_war = {
+
+		potential = {
+			has_country_flag = ChineseWarParticipant
+		}
+		
+		allow = {
+			owns = 1612
+			war = no
+		}
+
+		effect = {
+
+			remove_country_modifier = total_war
+		
+			#neutrality = yes
+
+			add_country_modifier = {
+				name = chineseturmoil
+				duration = 3650
+			}
+			
+            CHI = {
+				all_core = { add_core = THIS }
+			}
+
+			any_owned = {add_core = THIS}
+			
+			#change_tag = CHI
+			add_accepted_culture = nanfaren
+			add_accepted_culture = beifaren
+			clr_country_flag = ChineseWarParticipant
+			
+			###create_vassal = FOR ##Formosa puppet once civil war done
+			#release_vassal = FUJ
+			#release_vassal = XBI
+			#release_vassal = GAN
+			#release_vassal = SIH
+			#release_vassal = YNN
+			#release_vassal = GUZ
+			#release_vassal = GXI
+			#release_vassal = HUA
+			#release_vassal = GUN
+			#release_vassal = HUB
+			#release_vassal = SXI
+			#release_vassal = HEN
+			#release_vassal = JIA
+			#release_vassal = SHA
+			#release_vassal = ZHE
+			#release_vassal = ANU
+			#release_vassal = JGS
+			#release_vassal = SHG
+			#release_vassal = ZHI
+			
+			FUJ = {clr_country_flag = ChineseWarParticipant}#Fujian
+			MCK = {clr_country_flag = ChineseWarParticipant}#Manchuria
+			MGL = {clr_country_flag = ChineseWarParticipant}#Mongolia
+			XIN = {clr_country_flag = ChineseWarParticipant}#Xianjiang
+			TIB = {clr_country_flag = ChineseWarParticipant}#Tibet
+			XBI = {clr_country_flag = ChineseWarParticipant}#Qinghai
+			GAN = {clr_country_flag = ChineseWarParticipant}#Gansu
+			SIH = {clr_country_flag = ChineseWarParticipant}#Sichuan
+			YNN = {clr_country_flag = ChineseWarParticipant}#Yunnan
+			GUZ = {clr_country_flag = ChineseWarParticipant}#GUZzhou
+			GXI = {clr_country_flag = ChineseWarParticipant}#Guanxi Clique
+			HUA = {clr_country_flag = ChineseWarParticipant}#Hunan
+			GUN = {clr_country_flag = ChineseWarParticipant}#Guangdong
+			HUB = {clr_country_flag = ChineseWarParticipant}#Hubei
+			SXI = {clr_country_flag = ChineseWarParticipant}#Shanxi Clique
+			HEN = {clr_country_flag = ChineseWarParticipant}#Henan
+			JIA = {clr_country_flag = ChineseWarParticipant}#Jiangxi
+			SHA = {clr_country_flag = ChineseWarParticipant}#Shaanxi
+			FOR = {clr_country_flag = ChineseWarParticipant}#Formosa
+			ZHE = {clr_country_flag = ChineseWarParticipant}#Zhejiang
+			ANU = {clr_country_flag = ChineseWarParticipant}#Anhui
+			JGS = {clr_country_flag = ChineseWarParticipant}#Jiangsu
+			SHG = {clr_country_flag = ChineseWarParticipant}#Shangdong
+			ZHI = {clr_country_flag = ChineseWarParticipant}#Zhili
+		}
+	}
+	
+	
+	start_chinese_war = {
+
+		potential = {
+			AI = yes
+			has_global_flag = ChinaWarStart
+		}
+		
+		allow = {
+			CHI = {
+				NOT = {
+					num_of_vassals = 1
+				}
+			}
+		}
+		effect = {
+			clr_global_flag = ChinaWarStart
+			
+			any_country = {limit = {owns = 1482 tag = CHI} change_tag = FUJ}#Fujian
+			any_country = {limit = {owns = 1556 tag = CHI} change_tag = XBI}#Qinghai
+			any_country = {limit = {owns = 1492 tag = CHI} change_tag = GAN}#Gansu
+			any_country = {limit = {owns = 1583 tag = CHI} change_tag = SIH}#Sichuan
+			any_country = {limit = {owns = 1601 tag = CHI} change_tag = YNN}#Yunnan
+			any_country = {limit = {owns = 1506 tag = CHI} change_tag = GUZ}#GUZzhou
+			any_country = {limit = {owns = 1502 tag = CHI} change_tag = GXI}#Guanxi Clique
+			any_country = {limit = {owns = 1527 tag = CHI} change_tag = HUA}#Hunan
+			any_country = {limit = {owns = 1495 tag = CHI} change_tag = GUN}#Guangdong
+			any_country = {limit = {owns = 1519 tag = CHI} change_tag = HUB}#Hubei
+			any_country = {limit = {owns = 1576 tag = CHI} change_tag = SXI}#Shanxi Clique
+			any_country = {limit = {owns = 1510 tag = CHI} change_tag = HEN}#Henan
+			any_country = {limit = {owns = 1545 tag = CHI} change_tag = JIA}#Jiangxi
+			any_country = {limit = {owns = 1559 tag = CHI} change_tag = SHA}#Shaanxi
+			any_country = {limit = {owns = 1485 tag = CHI} change_tag = FOR}#Formosa
+			any_country = {limit = {owns = 1604 tag = CHI} change_tag = ZHE}#Zhejiang
+			any_country = {limit = {owns = 2221 tag = CHI} change_tag = ANU}#Anhui
+			any_country = {limit = {owns = 1540 tag = CHI} change_tag = JGS}#Jiangsu
+			any_country = {limit = {owns = 1567 tag = CHI} change_tag = SHG}#Shangdong
+			any_country = {limit = {owns = 1612 tag = CHI} change_tag = ZHI}#Zhili
+			
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = XBI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = GAN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = SIH	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = YNN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = GXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = HUA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			FUJ = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = GAN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = SIH	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = YNN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = GXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = HUA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			XBI = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = SIH	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = YNN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = GXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = HUA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GAN = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = YNN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = GXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = HUA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SIH = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = GXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = HUA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			YNN = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = HUA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GXI = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = GUN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUA = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = HUB	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			GUN = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = SXI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HUB = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = HEN	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SXI = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = JIA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			HEN = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = SHA	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JIA = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			SHA = { war = {	war_name = "CHINESE_civil_war"	target = ZHE	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SHA = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SHA = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SHA = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SHA = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SHA = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			ZHE = { war = {	war_name = "CHINESE_civil_war"	target = ANU	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ZHE = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ZHE = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ZHE = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ZHE = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			ANU = { war = {	war_name = "CHINESE_civil_war"	target = JGS	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ANU = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ANU = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			ANU = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			JGS = { war = {	war_name = "CHINESE_civil_war"	target = SHG	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JGS = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			JGS = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			SHG = { war = {	war_name = "CHINESE_civil_war"	target = ZHI	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			SHG = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			ZHI = { war = {	war_name = "CHINESE_civil_war"	target = GUZ	attacker_goal = { casus_belli = civil_war }	defender_goal = { casus_belli = civil_war }	call_ally = no}}
+			
+			FUJ = {any_owned = {add_core = CHI}}#Fujian
+			MCK = {any_owned = {add_core = CHI}}#Manchuria
+			MGL = {any_owned = {add_core = CHI}}#Mongolia
+			XIN = {any_owned = {add_core = CHI}}#Xianjiang
+			TIB = {any_owned = {add_core = CHI}}#Tibet
+			XBI = {any_owned = {add_core = CHI}}#Qinghai
+			GAN = {any_owned = {add_core = CHI}}#Gansu
+			SIH = {any_owned = {add_core = CHI}}#Sichuan
+			YNN = {any_owned = {add_core = CHI}}#Yunnan
+			GUZ = {any_owned = {add_core = CHI}}#GUZzhou
+			GXI = {any_owned = {add_core = CHI}}#Guanxi Clique
+			HUA = {any_owned = {add_core = CHI}}#Hunan
+			GUN = {any_owned = {add_core = CHI}}#Guangdong
+			HUB = {any_owned = {add_core = CHI}}#Hubei
+			SXI = {any_owned = {add_core = CHI}}#Shanxi Clique
+			HEN = {any_owned = {add_core = CHI}}#Henan
+			JIA = {any_owned = {add_core = CHI}}#Jiangxi
+			SHA = {any_owned = {add_core = CHI}}#Shaanxi
+			FOR = {any_owned = {add_core = CHI}}#Formosa
+			ZHE = {any_owned = {add_core = CHI}}#Zhejiang
+			ANU = {any_owned = {add_core = CHI}}#Anhui
+			JGS = {any_owned = {add_core = CHI}}#Jiangsu
+			SHG = {any_owned = {add_core = CHI}}#Shangdong
+			ZHI = {any_owned = {add_core = CHI}}#Zhili
+		}
+	}
+	warlords = {
+			potential ={
+				OR = {
+				tag = FUJ 
+				tag = MCK 
+				tag = MGL 
+				tag = XIN 
+				tag = TIB 
+				tag = XBI 
+				tag = GAN 
+				tag = SIH 
+				tag = YNN 
+				tag = GUZ 
+				tag = GXI 
+				tag = HUA 
+				tag = GUN 
+				tag = HUB
+				tag = SXI 
+				tag = HEN 
+				tag = JIA 
+				tag = SHA 
+				tag = FOR 
+				tag = ZHE 
+				tag = ANU 
+				tag = JGS 
+				tag = SHG 
+				tag = ZHI 
+				}
+
+				NOT = {has_country_flag = warlord}
+			}
+			allow = {
+				war = yes
+			}
+
+			effect = {
+				set_country_flag = warlord
+				add_country_modifier = {
+					name = total_war
+					duration = -1
+				}
+			}
+
+			
+		}
+}

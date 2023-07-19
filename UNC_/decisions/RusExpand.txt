@@ -1,0 +1,61 @@
+
+political_decisions = {
+
+	expand_into_Tomsk = {
+
+		potential = {
+			1063 = {
+				empty = yes
+			}
+			1064 = {
+				empty = yes
+			}
+			1067 = {
+				empty = yes
+			}
+			1068 = {
+				empty = yes
+			}
+			1077 = {
+				empty = yes
+			}
+			2683 = {
+				empty = yes
+			}
+			2698 = {
+				empty = yes
+			}
+			
+			owns = 1184
+			owns = 1187
+			owns = 1188
+		}
+		
+		allow = {
+			year = 1815
+		}
+		effect = {
+			1063 = {
+				secede_province = THIS
+			}
+			1064 = {
+				secede_province = THIS
+			}
+			1067 = {
+				secede_province = THIS
+			}
+			1068 = {
+				secede_province = THIS
+			}
+			1077 = {
+				secede_province = THIS
+			}
+			2683 = {
+				secede_province = THIS
+			}
+			2698 = {
+				secede_province = THIS
+			}
+		}
+	}
+}

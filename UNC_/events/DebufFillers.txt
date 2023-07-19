@@ -1,0 +1,89 @@
+
+# Debuff on prestige gain
+country_event = {
+	id = 199011930
+	title = "EVTNAME199011930"
+	desc = "EVTDESC199011930"
+	picture = "GraphDown"
+
+	trigger = {
+		OR = {
+			prestige = 1
+			AND = {
+				year = 1836
+				month = 1
+			}
+		}
+		OR = {
+			tag = GPA
+			tag = GPB
+			tag = GPC
+			tag = GPD
+			tag = GPE
+			tag = GPF
+			tag = GPG
+			tag = GPH
+			tag = GPI
+			tag = GPJ
+			tag = GPK
+			tag = GPL
+			tag = GPM
+			tag = GPN
+			tag = GPO
+			tag = GPP
+			tag = GPR
+			tag = GPS
+			tag = GPT
+		}
+	}
+
+	option = {	
+		##https://www.reddit.com/r/victoria2/comments/9au6ku/how_to_give_wars_names/
+		capital_scope = {
+			immigrant_attract = -20
+		}
+		prestige = -100
+		research_points = -100
+		neutrality = yes
+		name = "EVTOPTB199011930"
+	}
+}
+
+country_event = {
+	id = 199011931
+	title = "EVTNAME199011931"
+	desc = "EVTDESC199011931"
+	picture = "BackToMenu"
+
+	trigger = {
+		ai = no
+		OR = {
+			tag = GPA
+			tag = GPB
+			tag = GPC
+			tag = GPD
+			tag = GPE
+			tag = GPF
+			tag = GPG
+			tag = GPH
+			tag = GPI
+			tag = GPJ
+			tag = GPK
+			tag = GPL
+			tag = GPM
+			tag = GPN
+			tag = GPO
+			tag = GPP
+			tag = GPR
+			tag = GPS
+			tag = GPT
+		}
+	}
+
+	option = {	
+		ENG = {
+			inherit = THIS
+		}
+		name = "EVTOPTB199011931"
+	}
+}

@@ -1,0 +1,223 @@
+army = {
+	name = "Kabul Army"
+	location = 1209
+	
+	leader = {
+		name = "Sher Shah Suri"
+		date = 1806.1.1
+		type = land
+		personality = skilled
+		background = rising_star
+		prestige = 8
+	}
+	
+	regiment = {
+		name= "1.Tribal Warriors"
+		type = irregular
+		home = 1210
+	}
+
+	regiment = {
+		name= "2.Tribal Warriors"
+		type = irregular
+		home = 1210
+	}
+
+	regiment = {
+		name= "3.Tribal Warriors"
+		type = irregular
+		home = 1210
+	}
+
+	regiment = {
+		name= "1.Tribal Warriors"
+		type = irregular
+		home = 1216
+	}
+
+	regiment = {
+		name= "2.Tribal Warriors"
+		type = irregular
+		home = 1216
+	}
+
+	regiment = {
+		name= "3.Tribal Warriors"
+		type = irregular
+		home = 1218
+	}
+	
+	regiment = {
+		name= "3.Tribal Warriors"
+		type = irregular
+		home = 1210
+	}
+
+	regiment = {
+		name= "4.Tribal Warriors"
+		type = irregular
+		home = 1216
+	}
+
+	regiment = {
+		name= "5.Tribal Warriors"
+		type = irregular
+		home = 1216
+	}
+
+	regiment = {
+		name= "6.Tribal Warriors"
+		type = irregular
+		home = 1218
+	}
+	
+	regiment = {
+		name= "1.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "2.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "3.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "4.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "5.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "6.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "7.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "8.Tribal Warriors"
+		type = cavalry
+		home = 1210
+	}
+	
+	regiment = {
+		name= "9.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "10.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "11.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "12.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "13.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "14.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "15.Suri Loyalists"
+		type = cavalry
+		home = 1243
+	}
+	
+	regiment = {
+		name= "16.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "17.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "18.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "19.Suri Guards"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "20.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "21.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+	
+	regiment = {
+		name= "22.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "23.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "24.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+
+	regiment = {
+		name= "25.Suri Loyalists"
+		type = irregular
+		home = 1243
+	}
+}

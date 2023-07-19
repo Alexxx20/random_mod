@@ -1,0 +1,71 @@
+
+
+#========================= L A N D =========================
+
+army = {
+name = "First Brigade"
+location = 609
+regiment = {
+name = "Regiment 0"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 1"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 2"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 3"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 4"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 5"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 6"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Regiment 7"
+type = irregular
+home = 591
+}
+regiment = {
+name = "Ottoman Artillary"
+type = artillery
+home = 591
+}
+regiment = {
+name = "Ottoman Artillary"
+type = artillery
+home = 591
+}
+regiment = {
+name = "Ottoman Artillary"
+type = artillery
+home = 591
+}
+}
+
+
+#========================= S E A =========================
+
+
+
+#========================= END OF FILE =========================
+

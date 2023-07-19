@@ -1,0 +1,4 @@
+owner = SECcontroller = SEC
+add_core = SEC
+trade_goods = timber
+life_rating = 35

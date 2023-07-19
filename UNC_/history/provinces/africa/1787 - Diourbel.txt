@@ -1,0 +1,5 @@
+owner = FUA
+controller = FUA
+add_core = FUA
+trade_goods = grain
+life_rating = 15

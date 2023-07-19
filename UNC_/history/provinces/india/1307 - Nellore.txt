@@ -1,0 +1,6 @@
+owner = GOK
+controller = GOK
+add_core = GOK
+
+trade_goods = grain
+life_rating = 32

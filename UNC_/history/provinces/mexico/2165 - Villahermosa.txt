@@ -1,0 +1,6 @@
+owner = TUX
+controller = TUX
+add_core = TUX
+add_core = MAY
+trade_goods = coffee
+life_rating = 30

@@ -1,0 +1,3 @@
+owner = MOHcontroller = MOHadd_core = MOH
+trade_goods = timber
+life_rating = 35

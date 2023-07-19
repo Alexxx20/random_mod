@@ -1,0 +1,30 @@
+# Accept Trade Fur
+country_event = {
+	id = 1990119801
+	title = "EVTNAME1990119801"
+	desc = "EVTDESC1990119801"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	option = {	
+		ai_will_do = {
+			factor = 1
+		}
+		name = "EVTOPTA199011980"
+		money = 600
+		wool = 100
+		
+		IRO = {
+			money = 800
+		}
+	}
+	
+	option = {	
+		ai_will_do = {
+			factor = 0
+		}
+		name = "EVTOPTB199011980"
+		prestige = 0
+	}
+}

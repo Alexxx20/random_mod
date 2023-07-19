@@ -1,0 +1,210 @@
+#######################
+#     IROQUIOUS       #
+#######################
+
+substate = {
+	first = IRO
+	second = MOH
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+substate = {
+	first = IRO
+	second = ONE
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+substate = {
+	first = IRO
+	second = CAY
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+substate = {
+	first = IRO
+	second = SEC
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+#######################
+#       CHINA         #
+#######################
+
+substate = {
+	first = CHI
+	second = GXI
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = YNN
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = XBI
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = SXI
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = GUZ
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = SIH
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = SHA
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = GAN
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = GUN
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = HUA
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = HUB
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = ZHE
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = FUJ
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = JIA
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = JGS
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = HEN
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = SHG
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = ZHI
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = CHI
+	second = FOR
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+
+#######################
+#     Golden Horde    #
+#######################
+
+vassal = {
+	first = GOL
+	second = ASK
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = GOL
+	second = NOG
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = GOL
+	second = CRI
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = GOL
+	second = BSH
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = GOL
+	second = SIB
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = GOL
+	second = KAZ
+	start_date = 1800.1.1
+	end_date = 1937.1.1
+}
+vassal = {
+	first = GOL
+	second = DAG
+	start_date = 1806.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = GOL
+	second = CIR
+	start_date = 1806.1.1
+	end_date = 1937.1.1
+}

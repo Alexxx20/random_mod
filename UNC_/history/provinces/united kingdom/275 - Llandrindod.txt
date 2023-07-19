@@ -1,0 +1,8 @@
+owner = ENL
+controller = ENL
+add_core = ENL
+add_core = ENG
+add_core = WLE
+add_core = CEL
+trade_goods = sulphur
+life_rating = 35

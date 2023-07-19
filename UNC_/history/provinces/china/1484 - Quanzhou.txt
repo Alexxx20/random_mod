@@ -1,0 +1,6 @@
+owner = FUJ
+controller = FUJ
+add_core = CHI
+add_core = FUJ
+trade_goods = tea
+life_rating = 32

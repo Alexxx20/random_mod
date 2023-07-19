@@ -1,0 +1,5 @@
+owner = NAH
+controller = NAH
+add_core = NAH
+trade_goods = iron
+life_rating = 35

@@ -1,0 +1,6 @@
+owner = HUB
+controller = HUB
+add_core = CHI
+add_core = HUB
+trade_goods = tea
+life_rating = 32

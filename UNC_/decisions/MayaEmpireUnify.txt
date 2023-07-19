@@ -1,0 +1,124 @@
+
+political_decisions = {
+
+	become_Maya_Empire = {
+
+		potential = {
+			NOT = {
+				has_global_flag = we_have_tried_this_once_maya
+			}
+			OR = {
+				primary_culture = mayan
+			}
+			NOT = {
+				exists = MAY
+			}
+		}
+		
+		allow = {
+			MAY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					primary_culture = mayan
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+					NOT = {
+						tag = THIS
+					}
+				}
+				annex_to = THIS
+			}
+			set_global_flag = we_have_tried_this_once_maya
+			change_tag = MAY
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	become_Aztec_Empire = {
+
+		potential = {
+			NOT = {
+				has_global_flag = we_have_tried_this_once_aztec
+			}
+			OR = {
+				primary_culture = zapotec
+				primary_culture = nahua
+			}
+			NOT = {
+				exists = AZE
+			}
+		}
+		
+		allow = {
+			NAH = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+			ZAP = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					OR = {
+						primary_culture = zapotec
+						primary_culture = nahua
+					}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+					NOT = {
+						tag = THIS
+					}
+				}
+				annex_to = THIS
+			}
+			set_global_flag = we_have_tried_this_once_aztec
+			change_tag = AZE
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

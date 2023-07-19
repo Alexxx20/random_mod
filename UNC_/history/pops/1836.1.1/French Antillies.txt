@@ -1,0 +1,133 @@
+#French Antilles (319200)
+#Ruled by France 1836
+#Martinique (190800/27450 POPS)
+2228 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 750
+	}
+
+	bureaucrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 100
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 900
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 250
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 400
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 125
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 1250
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 250
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 3400
+	}
+
+	slaves = {
+		culture = native_american_minor
+		religion = animist
+		size = 20000
+	}
+}
+#Guadeloupe (128400/32100 POPS)
+2230 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 850
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 1300
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 300
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 600
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 150
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 1500
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 300
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 3050
+	}
+
+	slaves = {
+		culture = native_american_minor
+		religion = animist
+		size = 24000
+	}
+
+}

@@ -1,0 +1,23 @@
+#name = "Mughal-Lodi War"
+
+1800.1.1 = {
+	add_attacker = AFG
+	add_defender = SHI
+	
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = conquest
+		actor = AFG
+		receiver = SHI
+	}
+	war_goal = {
+		casus_belli = make_puppet
+		actor = SHI
+		receiver = AFG
+	}
+
+}

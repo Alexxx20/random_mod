@@ -1,0 +1,2 @@
+owner = MERcontroller = MERadd_core = MERadd_core = MAYtrade_goods = grain
+life_rating = 30

@@ -1,0 +1,6 @@
+owner = QUE
+controller = QUE
+add_core = QUE
+add_core = MAY
+trade_goods = iron
+life_rating = 35.0

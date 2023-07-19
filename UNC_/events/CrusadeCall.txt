@@ -1,0 +1,110 @@
+
+# join crusade
+country_event = {
+	id = 199011951
+	title = "EVTNAME199011951"
+	desc = "EVTDESC199011951"
+	picture = "Hreelection"
+
+	is_triggered_only = yes
+
+	option = {
+		create_alliance = JER
+		prestige = 5
+		name = "EVTOPTB199011951"
+		ai_will_do = {
+			factor = 0.5
+		}
+		EGY = {
+			set_global_flag = crusade_prepare
+		}
+	}
+	option = {	
+		prestige = -5
+		name = "EVTOPTC199011951"
+		ai_will_do = {
+			factor = 0.5
+		}
+		EGY = {
+			set_global_flag = crusade_prepare
+		}
+	}
+}
+# defend Jerusalum Egypt
+country_event = {
+	id = 199011952
+	title = "EVTNAME199011952"
+	desc = "EVTDESC199011952"
+	picture = "Hreelection"
+
+	trigger = {
+		AND = {
+			AI = yes
+			NOT = {
+				has_global_flag = crusade_start
+			}
+			has_global_flag = crusade_prepare
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1 #COMMON
+		
+		modifier = {
+			factor = 30
+			prestige = 0
+		}
+	}
+	
+	option = {
+		EGY = {
+			war = {
+				target = JER
+				attacker_goal = {casus_belli = conquest}
+				defender_goal = {casus_belli = status_quo}
+				call_ally = yes
+			}
+			set_global_flag = crusade_start
+		}
+		name = "EVTOPTB199011952"
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#option = {	
+	#	prestige = -30
+	#	name = "EVTOPTC199011952"
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#	set_global_flag = crusade_start
+	#}
+}
+
+# Break Alliances After Crusade
+country_event = {
+	id = 199011953
+	title = "EVTNAME199011953"
+	desc = "EVTDESC199011953"
+	picture = "Celebration"
+
+	is_triggered_only = no
+
+	news = yes
+	news_desc_long = "EVTDESC199011953_NEWS_LONG"
+	news_desc_medium = "EVTDESC199011953_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC199011953_NEWS_SHORT"
+	
+	trigger = {
+		tag = JER
+		has_global_flag = crusade_start
+		war = no
+	}
+	option = {
+		neutrality = yes
+		name = "EVTOPTB199011953"
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

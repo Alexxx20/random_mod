@@ -1,0 +1,5 @@
+owner = KWQ
+controller = KWQ
+add_core = KWQ
+trade_goods = wool
+life_rating = 35.0

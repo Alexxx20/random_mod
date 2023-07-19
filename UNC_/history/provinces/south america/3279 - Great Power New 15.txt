@@ -1,0 +1,6 @@
+owner = GPO
+controller = GPO
+add_core = GPO
+trade_goods = fish
+life_rating = 20
+

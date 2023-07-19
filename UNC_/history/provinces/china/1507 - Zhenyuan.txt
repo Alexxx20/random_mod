@@ -1,0 +1,6 @@
+owner = GUZ
+controller = GUZ
+add_core = CHI
+add_core = GUZ
+trade_goods = tea
+life_rating = 32

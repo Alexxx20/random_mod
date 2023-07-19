@@ -1,0 +1,6 @@
+owner = SIH
+controller = SIH
+add_core = SIH
+add_core = CHI
+trade_goods = tea
+life_rating = 32

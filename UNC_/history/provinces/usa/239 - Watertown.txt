@@ -1,0 +1,4 @@
+owner = ONE
+controller = ONEadd_core = ONE
+trade_goods = ironlife_rating = 35
+

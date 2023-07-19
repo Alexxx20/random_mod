@@ -1,0 +1,6 @@
+owner = GPD
+controller = GPD
+add_core = GPD
+trade_goods = fish
+life_rating = 20
+

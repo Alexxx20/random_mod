@@ -1,0 +1,29 @@
+
+political_decisions = {
+
+	start_Crusade = {
+
+		potential = {
+			year = 1807
+			NOT = {
+				has_global_flag = we_have_tried_this_once_crusade
+			}
+			tag = PAP
+		}
+		
+		allow = {
+			civilized = no
+		}
+		effect = {
+			EGY = {
+				release = JER
+			}
+			any_country = {limit = {NOT = {tag = FROM} pop_majority_religion = catholic ai = no} country_event = 199011951}
+			any_country = {limit = {NOT = {tag = FROM} pop_majority_religion = catholic ai = yes} country_event = 199011951}
+			set_global_flag = we_have_tried_this_once_crusade
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+}

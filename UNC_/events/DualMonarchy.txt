@@ -1,0 +1,461 @@
+#Storming of the bastille
+country_event = {
+	id = 199011972
+	title = "EVTNAME199011972"
+	desc = "EVTDESC199011972"
+	major = yes
+	
+	trigger = {
+		civilized = no
+		tag = FRA
+		owns = 403
+		NOT = {
+			has_global_flag = bastille_storm
+			has_global_flag = dual_monarchy_war
+		}
+		average_militancy = 0.5
+		upper_house = {
+			ideology = liberal
+			value = 0.1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011972"
+		set_global_flag = bastille_storm
+		any_pop = {
+			limit = {
+				has_pop_culture = french
+			}
+			militancy = 2
+			consciousness = 0.5
+		}
+		403 = {
+			add_core = PES
+		}
+		release = PES
+		war = {
+			target = PES
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
+		}
+	}
+}
+
+#Protest of Aquitaine
+country_event = {
+	id = 199011973
+	title = "EVTNAME199011973"
+	desc = "EVTDESC199011973"
+	major = yes
+	
+	trigger = {
+		civilized = no
+		tag = FRA
+		NOT = {
+			has_global_flag = aquitaine_protest
+			has_global_flag = dual_monarchy_war
+		}
+		average_consciousness = 1
+		upper_house = {
+			ideology = conservative
+			value = 0.1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011973"
+		set_global_flag = aquitaine_protest
+		any_pop = {
+			militancy = 0.5
+			consciousness = 2
+		}
+	}
+}
+
+#Dual Monarchy Civil War --- French Collapse
+country_event = {
+	id = 199011974
+	title = "EVTNAME199011974"
+	desc = "EVTDESC199011974"
+	major = yes
+	
+	trigger = {
+		ENL = exists
+		civilized = no
+		tag = FRA
+		AND = {
+			has_global_flag = aquitaine_protest
+			has_global_flag = bastille_storm
+		}
+		NOT = {
+			has_global_flag = dual_monarchy_war
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011974"
+		set_global_flag = dual_monarchy_war
+		any_pop = {
+			militancy = 2
+			consciousness = 2
+		}
+		release = AQU
+		war = {
+			target = AQU
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		ENL = {
+			country_event = 199011975
+		}
+	}
+}
+
+#England Join War
+country_event = {
+	id = 199011975
+	title = "EVTNAME199011975"
+	desc = "EVTDESC199011975"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA199011975"
+		war = {
+			target = FRA
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		ai_will_do = {
+			factor = .6
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB199011975"
+		prestige = -5
+		ai_will_do = {
+			factor = .4
+		}
+	}
+}
+
+#Cade's Rebellion
+country_event = {
+	id = 199011976
+	title = "EVTNAME199011976"
+	desc = "EVTDESC199011976"
+	major = yes
+	
+	trigger = {
+		civilized = no
+		OR = {
+			tag = ENL
+			tag = ENG
+		}
+		owns = 301
+		NOT = {
+			has_global_flag = cade_rebellion
+			has_global_flag = dual_monarchy_war
+		}
+		average_militancy = 1
+		upper_house = {
+			ideology = liberal
+			value = 0.1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011976"
+		set_global_flag = cade_rebellion
+		any_pop = {
+			limit = {
+				has_pop_culture = british
+			}
+			militancy = 2
+			consciousness = 0.5
+		}
+		301 = {
+			add_core = CAD
+		}
+		release = CAD
+		war = {
+			target = CAD
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
+		}
+	}
+}
+
+#Regency Council
+country_event = {
+	id = 199011977
+	title = "EVTNAME199011977"
+	desc = "EVTDESC199011977"
+	major = yes
+	
+	trigger = {
+		civilized = no
+		year = 1820
+		NOT = {
+			has_global_flag = regency_council
+			has_global_flag = dual_monarchy_war
+		}
+		OR = {
+			tag = ENL
+			tag = ENG
+		}
+	}
+	
+	option = {
+		set_global_flag = regency_council
+		any_pop = {
+			limit = {
+				has_pop_culture = british
+			}
+			militancy = 0.5
+			consciousness = 2
+		}
+		prestige = -20
+		name = "EVTOPTA199011977"
+	}
+}
+
+#Dual Monarchy Civil War --- English Collapse
+country_event = {
+	id = 199011978
+	title = "EVTNAME199011978"
+	desc = "EVTDESC199011978"
+	major = yes
+	
+	trigger = {
+		civilized = no
+		tag = ENL
+		AND = {
+			has_global_flag = regency_council
+			has_global_flag = cade_rebellion
+		}
+		NOT = {
+			has_global_flag = dual_monarchy_war
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011978"
+		set_global_flag = dual_monarchy_war
+		any_pop = {
+			militancy = 2
+			consciousness = 2
+		}
+		release = WLE
+		war = {
+			target = WLE
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		release = COR
+		war = {
+			target = COR
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		FRA = {
+			country_event = 199011979
+		}
+	}
+}
+#Dual Monarchy Civil War --- English Collapse
+country_event = {
+	id = 199011989
+	title = "EVTNAME199011978"
+	desc = "EVTDESC199011978"
+	major = yes
+	
+	trigger = {
+		civilized = no
+		tag = ENG
+		AND = {
+			has_global_flag = regency_council
+			has_global_flag = cade_rebellion
+		}
+		NOT = {
+			has_global_flag = dual_monarchy_war
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011978"
+		set_global_flag = dual_monarchy_war
+		any_pop = {
+			militancy = 2
+			consciousness = 2
+		}
+		release = WLE
+		war = {
+			target = WLE
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		release = COR
+		war = {
+			target = COR
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		release = SCO
+		war = {
+			target = SCO
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		FRA = {
+			country_event = 199011990
+		}
+	}
+}
+
+#France Join War
+country_event = {
+	id = 199011979
+	title = "EVTNAME199011979"
+	desc = "EVTDESC199011979"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA199011979"
+		war = {
+			target = ENL
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		ai_will_do = {
+			factor = .6
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB199011979"
+		prestige = -5
+		ai_will_do = {
+			factor = .4
+		}
+	}
+}
+
+#France Join War
+country_event = {
+	id = 199011990
+	title = "EVTNAME199011979"
+	desc = "EVTDESC199011979"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA199011979"
+		war = {
+			target = ENG
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		ai_will_do = {
+			factor = .6
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB199011979"
+		prestige = -5
+		ai_will_do = {
+			factor = .4
+		}
+	}
+}
+
+#Dual Monarchy Form
+##France Side
+country_event = {
+	id = 199011981
+	title = "EVTNAME199011981"
+	desc = "EVTDESC199011981"
+	major = yes
+	
+	trigger = {
+		tag = FRA
+		AND = {
+			owns = 425
+			owns = 300
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011981"
+		prestige = 15
+		change_tag = DUM
+		add_accepted_culture = british
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB199011981"
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+#Dual Monarchy Form
+##England Side
+country_event = {
+	id = 199011982
+	title = "EVTNAME199011982"
+	desc = "EVTDESC199011982"
+	major = yes
+	
+	trigger = {
+		OR = {
+			tag = ENL
+			tag = ENG
+		}
+		AND = {
+			owns = 425
+			owns = 300
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199011982"
+		prestige = 15
+		change_tag = DUM
+		remove_accepted_culture = british
+		primary_culture = british
+		add_accepted_culture = french
+		religion = protestant
+		capital = 300
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB199011982"
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,5 @@
+owner = DED
+controller = DED
+add_core = DED
+trade_goods = grain
+life_rating = 15

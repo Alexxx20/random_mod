@@ -1,0 +1,109 @@
+#Costa Rica Region (125200)
+#San Jose (77600/19400 POPS)
+2201 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 300
+	}
+
+	bureaucrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 250
+	}
+
+	officers = {
+		culture = native_american_minor
+		religion = animist
+		size = 50
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 200
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 1100
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 9600
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 10000
+	}
+}
+#Liberia (29600/7400 POPS)
+2202 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 150
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 75
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 325
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 350
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 6500
+	}
+}
+#Limon (18000/4500 POPS)
+2203 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 75
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 75
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 200
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size = 250
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 3900
+	}
+}

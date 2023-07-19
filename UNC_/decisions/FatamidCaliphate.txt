@@ -1,0 +1,44 @@
+
+political_decisions = {
+
+	FatamidCaliphateForm = {
+
+		potential = {
+			number_of_states = 3
+			OR = {
+				primary_culture = maghrebi
+			}
+			pop_majority_religion = sunni
+			NOT = {
+				has_global_flag = fatamidFormed
+			}
+			NOT = {
+				tag = MOR
+			}
+			NOT = {
+				tag = ALM
+			}
+			NOT = {
+				tag = UMA
+			}
+			NOT = {
+				tag = ALD
+			}
+		}
+		
+		allow = {
+			number_of_states = 4
+			prestige = 30
+		}
+		effect = {
+			prestige = 50
+			research_points = 7000
+			set_global_flag = fatamidFormed
+			change_tag = FAT
+			
+			THIS = {limit = {owns = 1745} capital = 1745}
+			THIS = {limit = {owns = 1153} capital = 1153}
+			THIS = {limit = {owns = 1151} capital = 1151}
+		}
+	}	
+}

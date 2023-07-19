@@ -1,0 +1,5 @@
+owner = YAG
+controller = YAG
+add_core = YAG
+trade_goods = wool
+life_rating = 35.0

@@ -1,0 +1,6 @@
+owner = SIH
+controller = SIH
+add_core = CHI
+add_core = SIH
+trade_goods = timber
+life_rating = 32

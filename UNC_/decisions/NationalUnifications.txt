@@ -1,0 +1,492 @@
+political_decisions = {
+	form_uk = {
+			news = yes
+			news_desc_long = "form_germany_NEWS_LONG"
+			news_desc_medium = "form_germany_NEWS_MEDIUM"
+			news_desc_short = "form_germany_NEWS_SHORT"
+			potential = {
+			is_culture_group = british
+				NOT = {
+				exists = ENG
+				exists = DUA
+				exists = CEL
+				}
+			}
+		
+			allow = {
+				#is_greater_power = yes
+				prestige = 45
+				war = no
+				#state_n_government = 1
+				ENG = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				change_tag = ENG
+				add_accepted_culture = british
+				add_accepted_culture = scottish
+				add_accepted_culture = cornish
+				add_accepted_culture = manx
+				any_country = {
+					limit = {
+						is_culture_group = british
+						in_sphere = THIS
+					}
+					country_event = { id=11101 days=0 }
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		form_russia = {
+			news = yes
+			news_desc_long = "form_germany_NEWS_LONG"
+			news_desc_medium = "form_germany_NEWS_MEDIUM"
+			news_desc_short = "form_germany_NEWS_SHORT"
+			potential = {
+				primary_culture = russian
+				NOT = {
+					exists = RUS
+				}
+				NOT = {
+					has_global_flag = russia_form
+				}
+			}
+		
+			allow = {
+				OR = {
+					AND = {
+						tag = MUS
+						year = 1880
+						NOT = {
+							year = 1885
+						}
+					}
+					AND = {
+						#is_greater_power = yes
+						prestige = 45
+						war = no
+						RUS = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									owner = {
+										in_sphere = THIS
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				set_global_flag = russia_form
+				change_tag = RUS
+				add_accepted_culture = ugrian
+				any_country = {
+					limit = {
+						primary_culture = russian
+						in_sphere = THIS
+					}
+					country_event = { id=11101 days=0 }
+				}
+				947 = { add_core = RUS }
+				946 = { add_core = RUS }
+				945 = { add_core = RUS }
+				948 = { add_core = RUS }
+				944 = { add_core = RUS }
+				949 = { add_core = RUS }
+				1018 = { add_core = RUS }
+				1019 = { add_core = RUS }
+				978 = { add_core = RUS }
+				974 = { add_core = RUS }
+				975 = { add_core = RUS }
+				976 = { add_core = RUS }
+				980 = { add_core = RUS }
+				972 = { add_core = RUS }
+				973 = { add_core = RUS }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		form_transcaucasia = {
+			potential = {
+				OR = {
+					tag = CIR
+					tag = AZB
+					tag = GEO
+					tag = ARM
+					tag = DAG
+				}
+				NOT = {
+					exists = TRA
+				}
+			}	
+			allow = {
+				war = no
+				TRA = {
+					all_core = {
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				prestige = 10
+				add_accepted_culture = north_caucasian
+				add_accepted_culture = georgian
+				add_accepted_culture = azerbaijani
+				add_accepted_culture = armenian
+				any_country = {
+					limit = {
+						vassal_of = THIS
+					}
+					annex_to = THIS
+				}
+				any_country = {
+					limit = {
+						in_sphere = THIS
+					}
+					
+					any_owned = {
+						limit = {
+							is_core = TRA
+						}
+						secede_province = THIS
+					}
+
+				}
+				
+				
+				# some early claims we can roll with for future colombian lebensraum
+				1050 = { add_core = TRA }
+				1048 = { add_core = TRA }
+				1096 = { add_core = TRA }
+				886 = { add_core = TRA }
+				885 = { add_core = TRA }
+				882 = { add_core = TRA }
+				887 = { add_core = TRA }
+				888 = { add_core = TRA }
+				891 = { add_core = TRA }
+				890 = { add_core = TRA }
+				1112 = { add_core = TRA }
+				1109 = { add_core = TRA }
+				1110 = { add_core = TRA }
+				1108 = { add_core = TRA }
+				1111 = { add_core = TRA }
+				1095 = { add_core = TRA }
+
+				change_tag = TRA
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		form_celtic_union = {
+			potential = {
+				OR = {
+					tag = SCO
+					tag = IRE
+					tag = WLE
+					tag = COR
+				}
+				NOT = {
+					exists = CEL
+				}
+				NOT = {
+					exists = ENG
+				}
+			}	
+			allow = {
+				war = no
+				CEL = {
+					all_core = {
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				prestige = 20
+				add_accepted_culture = irish
+				add_accepted_culture = scottish
+				add_accepted_culture = welsh
+				add_accepted_culture = cornish
+				any_country = {
+					limit = {
+						vassal_of = THIS
+					}
+					annex_to = THIS
+				}
+				any_country = {
+					limit = {
+						in_sphere = THIS
+					}
+					
+					any_owned = {
+						limit = {
+							is_core = CEL
+						}
+						secede_province = THIS
+					}
+
+				}
+				
+				
+				# some early claims we can roll with for future colombian lebensraum
+				279 = { add_core = CEL }
+				280 = { add_core = CEL }
+				299 = { add_core = CEL }
+
+				change_tag = CEL
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		form_ruthenia = {
+			potential = {
+				OR = {
+					tag = UKR
+					tag = BYE
+				}
+				NOT = {
+					exists = RUT
+				}
+				NOT = {
+					exists = RUS
+				}
+			}	
+			allow = {
+				war = no
+				UKR = {
+					all_core = {
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+				BYE = {
+					all_core = {
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				prestige = 20
+				add_accepted_culture = ukrainian
+				add_accepted_culture = byelorussian
+				any_country = {
+					limit = {
+						vassal_of = THIS
+					}
+					annex_to = THIS
+				}
+				any_country = {
+					limit = {
+						in_sphere = THIS
+					}
+					
+					any_owned = {
+						limit = {
+							is_core = RUT
+						}
+						secede_province = THIS
+					}
+
+				}
+				
+				
+				# some early claims we can roll with for future colombian lebensraum
+				662 = { add_core = RUT }
+				663 = { add_core = RUT }
+				676 = { add_core = RUT }
+				677 = { add_core = RUT }
+				678 = { add_core = RUT }
+				950 = { add_core = RUT }
+
+				change_tag = RUT
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+form_yugoslavia = {
+		potential = {
+			civilized = yes
+			is_culture_group = south_slavic
+			NOT = { exists = YUG }
+			NOT = { has_global_flag = yugoslavia_formed }
+		}
+
+		allow = {
+			war = no
+			SER = {
+				OR = {
+					AND = {
+						exists = yes
+						OR = {
+							part_of_sphere = no
+							in_sphere = THIS
+							sphere_owner = { is_sphere_leader_of = THIS }
+						}
+					}
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = { in_sphere = THIS }
+							owner = {
+								is_culture_group = south_slavic
+								relation = { who = THIS value = 100 }
+							}
+						}
+					}
+				}
+			}
+			BOS = {
+				OR = {
+					AND = {
+						exists = yes
+						OR = {
+							part_of_sphere = no
+							in_sphere = THIS
+							sphere_owner = { is_sphere_leader_of = THIS }
+						}
+					}
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = { in_sphere = THIS }
+							owner = {
+								is_culture_group = south_slavic
+								relation = { who = THIS value = 100 }
+							}
+						}
+					}
+				}
+			}
+			CRO = {
+				OR = {
+					AND = {
+						exists = yes
+						OR = {
+							part_of_sphere = no
+							in_sphere = THIS
+							sphere_owner = { is_sphere_leader_of = THIS }
+						}
+					}
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = { in_sphere = THIS }
+							owner = {
+								is_culture_group = south_slavic
+								relation = { who = THIS value = 100 }
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			set_global_flag = yugoslavia_formed
+			prestige = 20
+			all_core = { add_core = YUG }
+			SER = { all_core = { add_core = YUG } }
+			MON = { all_core = { add_core = YUG } }
+			CRO = { all_core = { add_core = YUG } }
+			BOS = { all_core = { add_core = YUG } }
+			SLO = { all_core = { add_core = YUG } }
+			add_accepted_culture = serb
+			add_accepted_culture = bosniak
+			add_accepted_culture = croat
+			change_tag = YUG
+			any_country = {
+				limit = {
+					NOT = { is_culture_group = south_slavic }
+					in_sphere = THIS
+					war = no
+					any_owned_province = {
+						OR = {
+							is_core = SER
+							is_core = BOS
+							is_core = CRO
+						}
+					}
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							is_core = SER
+							is_core = BOS
+							is_core = CRO
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			any_country = {
+				limit = {
+					war = no
+					is_culture_group = south_slavic
+					NOT = { tag = ALB }
+					OR = {
+						in_sphere = THIS
+						sphere_owner = { is_sphere_leader_of = THIS }
+						relation = { who = THIS value = 50 }
+					}
+				}
+				country_event = 11108
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	}

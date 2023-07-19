@@ -1,0 +1,166 @@
+army = {
+	name = "Kabul Army"
+	location = 1209
+	
+	regiment = {
+		name= "1.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "2.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "3.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "4.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "5.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "6.Soldiers"
+		type = irregular
+		home = 1121
+	}
+	
+	regiment = {
+		name= "7.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "8.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "9.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "10.Soldiers"
+		type = irregular
+		home = 1121
+	}
+	
+	regiment = {
+		name= "11.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "12.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "13.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "14.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "15.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "16.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "17.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "18.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "19.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "20.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "21.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "22.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "23.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "24.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "25.Soldiers"
+		type = cavalry
+		home = 1121
+	}
+	
+	regiment = {
+		name= "26.Soldiers"
+		type = irregular
+		home = 1121
+	}
+
+	regiment = {
+		name= "27.Soldiers"
+		type = irregular
+		home = 1121
+	}
+}

@@ -1,0 +1,6 @@
+owner = GPA
+controller = GPA
+add_core = GPA
+trade_goods = fish
+life_rating = 20
+

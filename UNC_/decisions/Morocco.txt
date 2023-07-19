@@ -1,0 +1,91 @@
+political_decisions = {
+	anti_reconquista = {
+		news = yes
+		news_desc_long = "anti_recon_NEWS_LONG"
+		news_desc_medium = "anti_recon_NEWS_MEDIUM"
+		news_desc_short = "anti_recon_NEWS_SHORT"
+		potential = {
+			NOT = {
+				year = 1880
+			}
+			ALD = {
+				ai = yes
+				exists = yes
+			}
+			tag = MOR
+			NOT = {
+				has_global_flag = anti_recon
+			}
+			prestige = 25
+			SPA = {
+				exists = yes
+			}
+		}
+		
+		allow = {
+			prestige = 30
+			relation = {
+				who = ALD 
+				value = 50
+			}
+		}
+		
+		effect = {
+		
+			set_global_flag = anti_recon
+			inherit = ALD
+			change_tag = ALM
+			war = {
+				target = SPA
+				attacker_goal = {casus_belli = conquest}
+				defender_goal = {casus_belli = humiliate}
+				call_ally = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.8
+		}
+	}
+	
+	form_umayyad = {
+		news = yes
+		news_desc_long = "form_Umayyad_NEWS_LONG"
+		news_desc_medium = "form_Umayyad_NEWS_MEDIUM"
+		news_desc_short = "form_Umayyad_NEWS_SHORT"
+		potential = {
+			tag = ALM
+			NOT = {
+				has_global_flag = big_Muslim_Spain
+			}
+		}
+	
+		allow = {
+			war = no
+			owns = 487
+		}
+		
+		effect = {
+			set_global_flag = big_Muslim_Spain
+			change_tag = UMA
+			primary_culture = spanish
+			add_accepted_culture = portugese
+			remove_accepted_culture = berber
+			war = {
+				target = POR
+				attacker_goal = {casus_belli = conquest}
+				defender_goal = {casus_belli = humiliate}
+				call_ally = no
+			}
+			capital = 510
+			release = ALM
+			release = ALD
+			ALM = {
+				inherit = ALD
+			}
+		}
+		ai_will_do = {
+			factor = 0.8
+		}
+	}
+}

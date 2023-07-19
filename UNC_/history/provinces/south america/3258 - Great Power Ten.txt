@@ -1,0 +1,6 @@
+owner = GPJ
+controller = GPJ
+add_core = GPJ
+trade_goods = fish
+life_rating = 20
+

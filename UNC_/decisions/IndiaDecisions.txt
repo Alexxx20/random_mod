@@ -1,0 +1,137 @@
+political_decisions = {
+	form_mughals = {
+		potential = {
+			tag = AFG
+			government = absolute_monarchy
+			owns = 1236
+			NOT = {
+				has_global_flag = Mughal_Form
+			}
+		}
+		
+		allow = {
+			owns = 1236
+			war = no
+		}
+		
+		effect = {
+			change_tag = MUG
+			any_owned = {remove_core = MUG}
+			set_global_flag = Mughal_Form
+		}
+	}
+	
+	aravali_shield = {
+		potential = {
+			tag = SHI
+			government = absolute_monarchy
+			owns = 1236
+			war = no
+			NOT = {
+				has_global_flag = India_Conquer
+			}
+		}
+		
+		allow = {
+			prestige = 30
+		}
+		
+		effect = {
+			set_global_flag = India_Conquer
+			badboy = 10
+			any_country = {limit = {owns = 1270 tag = IND} country_event = 199011984}
+			any_country = {limit = {owns = 1268 tag = JAI} country_event = 199011984}
+			any_country = {limit = {owns = 1266 tag = JOD} country_event = 199011984}
+			any_country = {limit = {owns = 1267 tag = BIK} country_event = 199011984}
+		}
+	}
+	
+	indian_khanate = {
+		potential = {
+			tag = MUG
+			government = absolute_monarchy
+			owns = 1236
+			war = no
+			NOT = {
+				has_global_flag = India_Conquer
+			}
+		}
+		
+		allow = {
+			prestige = 14
+		}
+		
+		effect = {
+			set_global_flag = India_Conquer
+			badboy = 22
+			any_country = {limit = {owns = 1268 tag = JAI} country_event = 199011984}
+			any_country = {limit = {owns = 1266 tag = JOD} country_event = 199011984}
+			any_country = {limit = {owns = 1267 tag = BIK} country_event = 199011984}
+			any_country = {limit = {owns = 1274 tag = BUN} country_event = 199011984}
+			any_country = {limit = {owns = 1282 tag = MEW} country_event = 199011984}
+			any_country = {limit = {owns = 1295 tag = BER} country_event = 199011984}
+			any_country = {limit = {owns = 1271 tag = IND} country_event = 199011984}
+			any_country = {limit = {owns = 1231 tag = PAN} country_event = 199011984}
+			any_country = {limit = {owns = 1286 tag = BIJ} country_event = 199011984}
+			any_country = {limit = {owns = 1272 tag = BHO} country_event = 199011984}
+			any_country = {limit = {owns = 1299 tag = ADA} country_event = 199011984}
+		}
+	}
+	
+	Bijapur_form_Maratha = {
+		potential = {
+			tag = BIJ
+			government = absolute_monarchy
+			owns = 1286
+			war_with = MUG
+			NOT = {
+				has_global_flag = Maratha_Form
+			}
+		}
+		
+		effect = {
+			set_global_flag = Maratha_Form
+			prestige = 20
+			change_tag = MAR
+		}
+	}
+	
+	Maratha_expand = {
+		potential = {
+			tag = MAR
+			NOT = {
+				has_global_flag = Maratha_Expand
+			}
+		}
+		
+		effect = {
+			badboy = 5
+			set_global_flag = Maratha_Expand
+			1297 = {add_core = THIS}
+			1299 = {add_core = THIS}
+			1298 = {add_core = THIS}
+			1296 = {add_core = THIS}
+			1295 = {add_core = THIS}
+			1291 = {add_core = THIS}
+			1294 = {add_core = THIS}
+			1292 = {add_core = THIS}
+			1271 = {add_core = THIS}
+			1276 = {add_core = THIS}
+			1272 = {add_core = THIS}
+			1275 = {add_core = THIS}
+			1273 = {add_core = THIS}
+			1274 = {add_core = THIS}
+			1270 = {add_core = THIS}
+			1269 = {add_core = THIS}
+			1264 = {add_core = THIS}
+			
+			1286 = {remove_core = THIS}
+			1283 = {add_core = HID}
+			1284 = {add_core = HID}
+			1285 = {add_core = HID}
+			1286 = {add_core = HID}
+			1287 = {add_core = HID}
+			release = HID
+		}
+	}
+}

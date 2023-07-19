@@ -1,0 +1,71 @@
+
+
+#========================= L A N D =========================
+
+army = {
+name = "Army 1"
+location = 580
+regiment = {
+name = "Regiment 0"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 1"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 2"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 3"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 4"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 5"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 6"
+type = irregular
+home = 580
+}
+regiment = {
+name = "Regiment 7"
+type = cavalry
+home = 580
+}
+regiment = {
+name = "Regiment 8"
+type = cavalry
+home = 580
+}
+regiment = {
+name = "Regiment 9"
+type = cavalry
+home = 580
+}
+regiment = {
+name = "Regiment 10"
+type = cavalry
+home = 580
+}
+}
+
+
+#========================= S E A =========================
+
+
+
+#========================= END OF FILE =========================
+

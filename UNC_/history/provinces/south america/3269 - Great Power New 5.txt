@@ -1,0 +1,6 @@
+owner = GPE
+controller = GPE
+add_core = GPE
+trade_goods = fish
+life_rating = 20
+

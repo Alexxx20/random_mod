@@ -1,0 +1,6 @@
+owner = WAA
+controller = WAA
+add_core = WAA
+trade_goods = fruit
+life_rating = 30
+colonial = 2

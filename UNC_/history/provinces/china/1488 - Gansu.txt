@@ -1,0 +1,6 @@
+owner = GAN
+controller = GAN
+add_core = CHI
+add_core = GAN
+trade_goods = cotton
+life_rating = 32

@@ -1,0 +1,113 @@
+capital = 300
+primary_culture = british
+culture = anglo_canadian
+religion = protestant
+government = absolute_monarchy
+plurality = 30
+nationalvalue = nv_order
+literacy = 0.15
+
+#GreaterPowers = prestige
+prestige = 40
+
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = wealth_voting
+public_meetings = yes_meeting
+press_rights = censored_press
+trade_unions = non_socialist
+voting_system = first_past_the_post
+political_parties = non_secret_ballots
+
+# Social Reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = trinket_safety
+health_care = trinket_health_care
+unemployment_subsidies = trinket_subsidies
+pensions = no_pensions 
+school_reforms = low_schools
+
+# Technologies
+
+# Inventions
+#
+
+
+
+# Starting Consciousness
+consciousness = .2
+nonstate_consciousness = 1
+
+ruling_party = ENG_conservative
+last_election = 1835.2.6
+upper_house = {
+	fascist = 0
+	liberal = 12
+	conservative = 83
+	reactionary = 5
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+schools = naval_tech_school
+
+foreign_investment = {
+	BEL = 10000
+	DEN = 2000
+}
+
+oob = "ENG_oob.txt"
+
+1842.8.9 = {
+decision = webster_ashburton_treaty
+}
+
+1846.6.25 = {
+decision = repeal_the_corn_laws
+}
+
+1857.1.1 = {
+decision = crown_empress_of_india
+}
+
+1860.10.18 = {
+decision = torching_of_the_summer_palace
+}
+
+1861.1.1 = {
+	oob = "/1861/ENG_oob.txt"
+	prestige = 165
+	plurality = 65
+	literacy = 0.70
+	non_state_culture_literacy = 0.15
+
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = wealth_voting
+public_meetings = yes_meeting
+press_rights = free_press
+trade_unions = non_socialist
+voting_system = first_past_the_post
+political_parties = non_secret_ballots	
+ruling_party = ENG_liberal_2
+	
+# Social Reforms
+wage_reform = trinket_wage
+work_hours = fourteen_hours
+safety_regulations = trinket_safety
+health_care = low_health_care
+unemployment_subsidies = trinket_subsidies
+pensions = no_pensions 
+school_reforms = low_schools	
+	
+# Technologies
+
+#Inventions
+
+}

@@ -1,0 +1,36 @@
+
+political_decisions = {
+
+	become_Mossi_Empire = {
+
+		potential = {
+			NOT = {
+				has_global_flag = we_have_tried_this_once_mossi
+			}
+			OR = {
+				tag = YAT
+				tag = OUE
+				tag = GUR
+				tag = TEN
+			}
+			NOT = {
+				exists = MOS
+			}
+		}
+		
+		allow = {
+			civilized = yes
+			NOT = {
+				exists = MOS
+			}
+		}
+		effect = {
+			change_tag = MOS
+			inherit = YAT
+			inherit = OUE
+			inherit = GUR
+			inherit = TEN
+			set_global_flag = we_have_tried_this_once_mossi
+		}
+	}	
+}

@@ -1,0 +1,82 @@
+political_decisions = {
+	Disband_Iroquois = {
+		ai_will_do = {
+			factor = 1
+		}
+		potential = {
+			civilized = yes
+			tag = IRO
+			OR = {
+				is_our_vassal = MOH
+				is_our_vassal = ONE
+				is_our_vassal = CAY
+				is_our_vassal = SEC
+			}
+		}
+		
+		allow = {
+			OR = {
+				is_our_vassal = MOH
+				is_our_vassal = ONE
+				is_our_vassal = CAY
+				is_our_vassal = SEC
+			}
+		}
+		effect = {
+			any_country = {
+					limit = {
+						vassal_of = THIS
+					}
+					annex_to = THIS
+				}
+
+			#release_vassal = MOH
+			#release_vassal = ONE
+			#release_vassal = CAY
+			#release_vassal = SEC
+		
+			#all_core = {
+			#	remove_core = THIS
+			#}
+			#change_tag = ONO
+		}
+	}
+	
+	Fur_Trade = {
+		ai_will_do = {
+			factor = 1
+		}
+		
+		potential = {
+			tag = IRO
+			NOT = {
+				has_country_flag = FurTrade
+				232 = {empty = yes}
+				owns = 232
+			}
+			AND = {
+				228 = {empty = yes}
+				178 = {empty = yes}
+				180 = {empty = yes}
+				173 = {empty = yes}
+				175 = {empty = yes}
+				176 = {empty = yes}
+				174 = {empty = yes}	
+			}
+			is_our_vassal = SEC
+		}
+		
+		allow = {
+			prestige = 5
+		}
+		
+		effect = {
+			232 = {
+				owner = {
+					country_event = 1990119801
+				}
+			}
+			set_country_flag = FurTrade
+		}
+	}
+}

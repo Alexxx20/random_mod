@@ -1,0 +1,467 @@
+#Uman Region (116000) #see Trucial States.txt for balance of region  
+#under the rule of Oman in 1836  
+#Muscat (32000/8000 POPS)   
+1166 = {
+	aristocrats = {
+		culture = omani
+		religion = ibadi
+		size = 150
+	}
+
+	bureaucrats = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	officers = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 100
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 1100
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 625
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 100
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 1850
+	}
+
+	artisans = {
+		culture = baluchi
+		religion = sunni
+		size = 50
+	}
+
+	soldiers = {
+		culture = baluchi
+		religion = sunni
+		size = 25
+	}
+
+	farmers = {
+		culture = baluchi
+		religion = sunni
+		size = 925
+	}
+
+	clergymen = {
+		culture = persian
+		religion = shiite
+		size = 25
+	}
+
+	artisans = {
+		culture = persian
+		religion = shiite
+		size = 50
+	}
+
+	farmers = {
+		culture = persian
+		religion = shiite
+		size = 925
+	}
+
+	slaves = {
+		culture = african_minor
+		religion = animist
+		size = 2000
+	}
+}
+#Suhar (16000/4000 POPS)   
+1169 = {
+	aristocrats = {
+		culture = omani
+		religion = sunni
+		size = 30
+	}
+	
+	aristocrats = {
+		culture = omani
+		religion = ibadi
+		size = 20
+	}
+
+	clergymen = {
+		culture = omani
+		religion = shiite
+		size = 30
+	}
+	
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 45
+	}
+
+	artisans = {
+		culture = omani
+		religion = sunni
+		size = 70
+	}
+	
+	artisans = {
+		culture = omani
+		religion = shiite
+		size = 80
+	}
+	
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	soldiers = {
+		culture = omani
+		religion = sunni
+		size = 20
+	}
+	
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 30
+	}
+
+
+	farmers = {
+		culture = omani
+		religion = sunni
+		size = 1200
+	}
+	
+	farmers = {
+		culture = omani
+		religion = shiite
+		size = 1000
+	}
+	
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 1425
+	}
+}
+#Nizwa (24000/6000 POPS)   
+1170 = {
+	aristocrats = {
+		culture = omani
+		religion = ibadi
+		size = 75
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 250
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 4575
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 15
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 10
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 925
+	}
+}
+#Sur (24000/6000 POPS)   
+1171 = {
+	aristocrats = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 100
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 1800
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 100
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 1850
+	}
+
+	artisans = {
+		culture = baluchi
+		religion = sunni
+		size = 50
+	}
+
+	soldiers = {
+		culture = baluchi
+		religion = sunni
+		size = 25
+	}
+
+	farmers = {
+		culture = baluchi
+		religion = sunni
+		size = 925
+	}
+
+	slaves = {
+		culture = african_minor
+		religion = animist
+		size = 1100
+	}
+}
+#Duqm (20000/5000 POPS)   
+1172 = {
+	aristocrats = {
+		culture = omani
+		religion = ibadi
+		size = 75
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 75
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 200
+	}
+
+	soldiers = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 3600
+	}
+
+	clergymen = {
+		culture = omani
+		religion = ibadi
+		size = 25
+	}
+
+	artisans = {
+		culture = omani
+		religion = ibadi
+		size = 50
+	}
+
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 925
+	}
+}
+#Hadramaut Region (36000) #see Yemen.txt for balance of region  
+#under the rule of Oman in 1836  
+#Salalah (20000/5000 POPS)   
+1174 = {
+	aristocrats = {
+		culture = mehri
+		religion = shiite
+		size = 65
+	}
+
+	bureaucrats = {
+		culture = mehri
+		religion = shiite
+		size = 5
+	}
+
+	officers = {
+		culture = mehri
+		religion = shiite
+		size = 5
+	}
+
+	clergymen = {
+		culture = mehri
+		religion = shiite
+		size = 75
+	}
+
+	artisans = {
+		culture = mehri
+		religion = shiite
+		size = 200
+	}
+
+	soldiers = {
+		culture = mehri
+		religion = shiite
+		size = 50
+	}
+
+	farmers = {
+		culture = mehri
+		religion = shiite
+		size = 1400
+	}
+	
+	farmers = {
+		culture = shehri
+		religion = shiite
+		size = 900
+	}
+	
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 300
+	}
+	
+	farmers = {
+		culture = dhofari
+		religion = shiite
+		size = 880
+	}
+	
+	farmers = {
+		culture = omani
+		religion = ibadi
+		size = 120
+	}
+
+	clergymen = {
+		culture = mehri
+		religion = sunni
+		size = 25
+	}
+
+	artisans = {
+		culture = mehri
+		religion = sunni
+		size = 50
+	}
+
+	farmers = {
+		culture = dhofari
+		religion = sunni
+		size = 400
+	}
+
+	farmers = {
+		culture = mehri
+		religion = sunni
+		size = 525
+	}
+}

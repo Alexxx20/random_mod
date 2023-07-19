@@ -1,0 +1,6 @@
+owner = GOK
+controller = GOK
+add_core = GOK
+
+trade_goods = cotton
+life_rating = 32

@@ -1,0 +1,6 @@
+owner = GPI
+controller = GPI
+add_core = GPI
+trade_goods = fish
+life_rating = 20
+

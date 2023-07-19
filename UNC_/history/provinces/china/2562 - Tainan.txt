@@ -1,0 +1,6 @@
+owner = FOR
+controller = FOR
+add_core = CHI
+add_core = FOR
+trade_goods = tea
+life_rating = 32

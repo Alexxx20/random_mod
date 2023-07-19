@@ -1,0 +1,6 @@
+owner = SHG
+controller = SHG
+add_core = CHI
+add_core = SHG
+trade_goods = cotton
+life_rating = 32

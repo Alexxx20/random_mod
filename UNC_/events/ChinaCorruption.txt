@@ -1,0 +1,512 @@
+
+# Corruption Start
+country_event = {
+	id = 199011955
+	title = "EVTNAME199011955"
+	desc = "EVTDESC199011955"
+	picture = "Celebration"
+	
+	trigger = {
+		civilized = no
+		government = absolute_monarchy
+		tag = CHI
+		AND = {
+			NOT = { has_country_flag = corruption_system_one }
+			NOT = { has_country_flag = corruption_system_two }
+			NOT = { has_country_flag = corruption_system_three }
+			NOT = { has_country_flag = corruption_system_four }
+			NOT = { has_country_flag = corruption_system_five }
+		}
+	}
+
+	option = {	
+		name = "EVTOPTB199011955"
+		add_country_modifier = {
+			name = corruption_one
+			duration = 9999
+		}
+		set_country_flag = corruption_system_one
+	}
+}
+
+# Corrupt Religious Leader
+country_event = {
+	id = 199011956
+	title = "EVTNAME199011956"
+	desc = "EVTDESC199011956"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011956"
+		random_country = {limit = {AI = yes} country_event = 199011971}
+		ai_will_do = {
+			factor = 0.08
+		}	
+	}
+	
+	#replace with confuciast leaders
+	option = {	
+		name = "EVTOPTB199011956"
+		prestige = -30
+		ai_will_do = {
+			factor = 0.42
+		}	
+	}
+	
+	#kill them
+	option = {	
+		name = "EVTOPTC199011956"
+		badboy = 3
+		ai_will_do = {
+			factor = 0.5
+		}	
+	}
+}
+
+# Exam System Cheaters
+country_event = {
+	id = 199011957
+	title = "EVTNAME199011957"
+	desc = "EVTDESC199011957"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011957"
+		random_country = {limit = {AI = yes} country_event = 199011971}
+		ai_will_do = {
+			factor = 0.08
+		}	
+	}
+	
+	#have everyone retake the exams
+	option = {	
+		name = "EVTOPTB199011957"
+		treasury = -100
+		ai_will_do = {
+			factor = 0.92
+		}	
+	}
+	
+}
+
+# corruption in family
+country_event = {
+	id = 199011958
+	title = "EVTNAME199011958"
+	desc = "EVTDESC199011958"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011958"
+		random_country = {limit = {AI = yes} country_event = 199011971}
+		ai_will_do = {
+			factor = 0.08
+		}	
+	}
+	
+	#kick out of family
+	option = {	
+		name = "EVTOPTB199011958"
+		prestige = -50
+		ai_will_do = {
+			factor = 0.92
+		}	
+	}
+	
+}
+
+# China investigating Corruption in province
+country_event = {
+	id = 199011959
+	title = "EVTNAME199011959"
+	desc = "EVTDESC199011959"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "EVTOPTA199011959"
+		CHI = {
+			country_event = 199011960
+		}
+	}
+}
+
+# China acting on corruption in Province
+country_event = {
+	id = 199011960
+	title = "EVTNAME199011960"
+	desc = "EVTDESC199011960"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011960"
+		random_country = {limit = {AI = yes} country_event = 199011971}
+		ai_will_do = {
+			factor = 0.08
+		}	
+	}
+	
+	#fight war
+	option = {	
+		name = "EVTOPTB199011960"
+		release_vassal = FROM
+		war = {
+			war_name = "CHINESE_CORRUPTION_WAR"
+			target = FROM
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		ai_will_do = {
+			factor = 0.92
+		}	
+	}
+}
+
+# Briefing Corruption 1
+country_event = {
+	id = 199011962
+	title = "EVTNAME199011962"
+	desc = "EVTDESC199011962"
+	picture = "Celebration"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		month = 1
+		civilized = no
+		government = absolute_monarchy
+		tag = CHI
+		has_country_flag = corruption_system_one
+		has_global_flag = ChinaReady
+	}
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011962"
+		clr_global_flag = ChinaReady
+		random_country = {limit = {AI = yes} country_event = 199011967}
+	}
+}
+
+# Briefing Corruption 2
+country_event = {
+	id = 199011963
+	title = "EVTNAME199011963"
+	desc = "EVTDESC199011963"
+	picture = "Celebration"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		month = 1
+		civilized = no
+		government = absolute_monarchy
+		tag = CHI
+		has_country_flag = corruption_system_two
+		has_global_flag = ChinaReady
+	}
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011963"
+		clr_global_flag = ChinaReady
+		random_country = {limit = {AI = yes} country_event = 199011967}
+	}
+}
+
+# Briefing Corruption 3
+country_event = {
+	id = 199011964
+	title = "EVTNAME199011964"
+	desc = "EVTDESC199011964"
+	picture = "Celebration"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		month = 1
+		civilized = no
+		government = absolute_monarchy
+		tag = CHI
+		has_country_flag = corruption_system_three
+		has_global_flag = ChinaReady
+	}
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011964"
+		clr_global_flag = ChinaReady
+		random_country = {limit = {AI = yes} country_event = 199011967}
+	}
+}
+
+# Briefing Corruption 4
+country_event = {
+	id = 199011965
+	title = "EVTNAME199011965"
+	desc = "EVTDESC199011965"
+	picture = "Celebration"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		month = 1
+		civilized = no
+		government = absolute_monarchy
+		tag = CHI
+		has_country_flag = corruption_system_four
+		has_global_flag = ChinaReady
+	}
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011965"
+		clr_global_flag = ChinaReady
+		random_country = {limit = {AI = yes} country_event = 199011967}
+	}
+}
+
+# Briefing Corruption 5
+country_event = {
+	id = 199011966
+	title = "EVTNAME199011966"
+	desc = "EVTDESC199011966"
+	picture = "Celebration"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		month = 1
+		civilized = no
+		government = absolute_monarchy
+		tag = CHI
+		has_country_flag = corruption_system_five
+		has_global_flag = ChinaReady
+	}
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011966"
+		clr_global_flag = ChinaReady
+		random_country = {limit = {AI = yes} country_event = 199011967}
+	}
+}
+
+# Random Country Gives China Corruption
+country_event = {
+	id = 199011967
+	title = "EVTNAME199011967"
+	desc = "EVTDESC199011967"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	#corrupt religous leader
+	option = {
+		name = "EVTOPTA199011967"
+		CHI = {
+			country_event = 199011956
+		}
+		ai_will_do = {
+			factor = .3
+		}
+	}
+	#exam system cheaters
+	option = {	
+		name = "EVTOPTB199011967"
+		CHI = {
+			country_event = 199011957
+		}
+		ai_will_do = {
+			factor = .3
+		}
+	}
+	#corruption in family
+	option = {
+		name = "EVTOPTC199011967"
+		CHI = {
+			country_event = 199011958
+		}
+		ai_will_do = {
+			factor = .1
+		}
+	}
+
+	#corruption province
+	option = {	
+		name = "EVTOPTD199011967"
+		random_country = {
+			limit = {
+				OR = {
+					substate_of = CHI
+					vassal_of = CHI
+				}
+				AI = yes
+			}
+			country_event = 199011959
+		}
+		ai_will_do = {
+			factor = .3
+		}
+	}
+}
+
+#Reset Event Thing
+country_event = {
+	id = 199011968
+	title = "EVTNAME199011968"
+	desc = "EVTDESC199011968"
+	picture = "Celebration"
+	
+	trigger = {
+		NOT = {
+			has_global_flag = ChinaReady
+		}
+		NOT = {
+			month = 1
+		}
+		AI = yes
+	}
+	
+	#let corruption be
+	option = {	
+		name = "EVTOPTA199011968"
+		set_global_flag = ChinaReady
+	}
+}
+
+#Civil War Start/Corruption to High
+country_event = {
+	id = 199011969
+	title = "EVTNAME199011969"
+	desc = "EVTDESC199011969"
+	picture = "Celebration"
+	
+	trigger = {
+		has_country_flag = corruption_system_six
+	}
+	
+	allow_multiple_instances = no
+	
+	#now we stand divided
+	option = {
+		name = "EVTOPTA199011969"
+		clr_country_flag = corruption_system_six
+		
+		set_country_flag = ChineseWarParticipant
+		any_country = {
+			limit = {
+				OR = {
+					substate_of = CHI
+					vassal_of = CHI 
+				}
+			}
+			country_event = 199011970
+			set_global_flag = ChinaWarStart
+		}
+
+	}
+}
+
+#Chinese Civil War Start
+country_event = {
+	id = 199011970
+	title = "EVTNAME199011970"
+	desc = "EVTDESC199011970"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = no
+	
+	#fight for victory
+	option = {	
+		any_owned = {
+			remove_core = CHI
+		}
+		name = "EVTOPTA199011970"
+		neutrality = yes
+		FROM = {
+			release_vassal = THIS
+		}
+		set_country_flag = ChineseWarParticipant
+	}
+}
+
+#Increase China Corruption
+country_event = {
+	id = 199011971
+	title = "EVTNAME199011971"
+	desc = "EVTDESC199011971"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = no
+	
+	#increase corruption level
+	option = {	
+		name = "EVTOPTA199011971"
+		any_country  = {limit = {tag = CHI has_country_flag = corruption_system_five} set_country_flag = corruption_system_six clr_country_flag = corruption_system_five}
+		any_country  = {limit = {tag = CHI has_country_flag = corruption_system_four} set_country_flag = corruption_system_five clr_country_flag = corruption_system_four}
+		any_country  = {limit = {tag = CHI has_country_flag = corruption_system_three} set_country_flag = corruption_system_four clr_country_flag = corruption_system_three}
+		any_country  = {limit = {tag = CHI has_country_flag = corruption_system_two} set_country_flag = corruption_system_three clr_country_flag = corruption_system_two}
+		any_country  = {limit = {tag = CHI has_country_flag = corruption_system_one} set_country_flag = corruption_system_two clr_country_flag = corruption_system_one prestige = 100}
+	}
+}
+
+#China Unify
+country_event = {
+	id = 199011983
+	title = "EVTNAME199011983"
+	desc = "EVTDESC199011983"
+	picture = "Celebration"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		NOT = {
+			has_global_flag = ChinaCivilized
+		}
+		tag = CHI
+		civilized = yes
+	}
+	
+	#increase corruption level
+	option = {	
+		name = "EVTOPTA199011983"
+		set_global_flag = ChinaCivilized
+		inherit = FUJ
+		inherit = XBI
+		inherit = GAN
+		inherit = SIH
+		inherit = YNN
+		inherit = GUZ
+		inherit = GXI
+		inherit = HUA
+		inherit = GUN
+		inherit = HUB
+		inherit = SXI
+		inherit = HEN
+		inherit = JIA
+		inherit = SHA
+		inherit = FOR
+		inherit = ZHE
+		inherit = ANU
+		inherit = JGS
+		inherit = SHG
+		inherit = ZHI
+	}
+}
